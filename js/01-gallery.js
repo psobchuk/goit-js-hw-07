@@ -1,14 +1,10 @@
 import { galleryItems } from "./gallery-items.js";
 // Change code below this line
+
 const gallery = document.querySelector(".gallery");
 const galleryMarkup = buildGallery(galleryItems);
 gallery.insertAdjacentHTML("beforeend", galleryMarkup);
 
-/**
-  |============================
-  | Будуємо галерею
-  |============================
-*/
 function buildGallery(galleryItems) {
   const markup = galleryItems
     .map(({ preview, original, description }) => {
@@ -29,11 +25,6 @@ function buildGallery(galleryItems) {
   return markup;
 }
 
-/**
-  |============================
-  | Обробляємо кліки
-  |============================
-*/
 gallery.addEventListener("click", onGalleryContainerClick);
 
 function onGalleryContainerClick(evt) {
